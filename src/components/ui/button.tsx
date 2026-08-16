@@ -16,13 +16,20 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        cta: "bg-primary text-primary-foreground rounded-full font-semibold shadow-[var(--shadow-card)] hover:bg-primary/90 hover:-translate-y-0.5 transition-all duration-300",
+        ctaSoft:
+          "bg-sage text-sage-foreground rounded-full font-semibold hover:bg-sage/80 transition-all duration-300",
+        ctaOutline:
+          "border border-primary/25 bg-card text-primary rounded-full font-semibold hover:bg-secondary transition-all duration-300",
       },
       size: {
         default: "h-9 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
+        xl: "h-14 px-8 text-base",
         icon: "h-9 w-9",
       },
+
     },
     defaultVariants: {
       variant: "default",
