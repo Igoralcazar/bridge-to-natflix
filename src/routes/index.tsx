@@ -4,23 +4,19 @@ import { Hero } from "@/components/natflix/Hero";
 import {
   Benefits,
   Comparison,
-  Modalities,
   Nutrition,
   Problem,
-  Proof,
-  Solution,
-  Stats,
-  Steps,
+  WhatIs,
 } from "@/components/natflix/Sections";
 import { Pricing } from "@/components/natflix/Pricing";
-import { Analysis, Faq, FinalCta, Transparency } from "@/components/natflix/Analysis";
+import { Analysis, Faq, FinalCta } from "@/components/natflix/Analysis";
 import { Footer } from "@/components/natflix/Footer";
 import { StickyCta } from "@/components/natflix/StickyCta";
 import { faqs } from "@/components/natflix/data";
 
-const TITLE = "Natflix Fitness: Treinos, Modalidades e Planos";
+const TITLE = "Natflix Fitness vale a pena? Análise honesta e preços";
 const DESCRIPTION =
-  "Conheça a Natflix Fitness, uma plataforma fitness para mulheres com treinos em casa e academia, diferentes modalidades, organização de rotina e conteúdos de alimentação.";
+  "Análise independente da Natflix Fitness: o que a plataforma oferece, o que gostamos, o que considerar antes de assinar, preços e para quem ela faz sentido.";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -30,7 +26,7 @@ export const Route = createFileRoute("/")({
       { name: "description", content: DESCRIPTION },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
-      { property: "og:type", content: "website" },
+      { property: "og:type", content: "article" },
       { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -58,20 +54,15 @@ function Index() {
       <Header />
       <main>
         <Hero />
-        <Stats />
         <Problem />
-        <Solution />
+        <WhatIs />
         <Benefits />
         <Comparison />
-        <Modalities />
-        <Steps />
-        <Nutrition />
-        <Proof />
-        <Pricing />
         <Analysis />
-        <Transparency />
-        <FinalCta />
+        <Nutrition />
+        <Pricing />
         <Faq />
+        <FinalCta />
       </main>
       <Footer />
       <StickyCta />

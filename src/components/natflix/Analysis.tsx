@@ -1,4 +1,4 @@
-import { AlertCircle, Check, Users } from "lucide-react";
+import { AlertCircle, Check, Minus, Users } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -8,131 +8,124 @@ import {
 import { AffiliateCta } from "./AffiliateCta";
 import { faqs } from "./data";
 
+const liked = [
+  "Variedade de treinos e modalidades além da musculação",
+  "Dá para treinar em casa ou na academia",
+  "Fichas e agendas ajudam a organizar a semana",
+  "Conteúdos complementares, como alimentação",
+];
+
+const considerations = [
+  "Não substitui acompanhamento presencial individual",
+  "Pode não ser ideal para quem busca algo totalmente personalizado",
+  "Assinatura e condições devem ser conferidas no site oficial",
+];
+
+const forWho = [
+  "Mulheres que querem praticidade no dia a dia",
+  "Quem quer organizar melhor a rotina de treino",
+  "Quem gosta de flexibilidade para treinar em casa ou na academia",
+  "Quem busca variedade de modalidades em uma única plataforma",
+];
+
+const notForWho = [
+  "Quem precisa de um treino 100% individualizado",
+  "Quem prefere acompanhamento presencial com profissional",
+  "Quem já tem uma rotina montada e funcionando bem",
+];
+
 export function Analysis() {
-  const positives = [
-    "Variedade de modalidades além da musculação",
-    "Mais de 2.600 conteúdos publicados, segundo a Natflix",
-    "Treinos para fazer em casa e na academia",
-    "Fichas de treino editáveis para registrar cargas",
-    "Agendas de treino para organizar a semana",
-    "Conteúdos relacionados à alimentação",
-    "Suporte direto da equipe, segundo a Natflix",
-  ];
-
-  const considerations = [
-    "É uma plataforma online, e não acompanhamento individual presencial.",
-    "Quem busca orientação médica, nutricional ou de treinamento altamente personalizada pode precisar de um profissional habilitado além de uma plataforma online.",
-    "Os planos têm renovação automática conforme o período escolhido, segundo o site oficial.",
-    "Preços e condições podem ser alterados pelo fornecedor.",
-  ];
-
   return (
     <section id="analise" aria-labelledby="analise-titulo" className="bg-background">
       <div className="container-page py-16 md:py-24">
-        <div className="rounded-[2rem] border border-border bg-cream p-6 md:p-12">
-          <p className="eyebrow">Opinião independente</p>
+        <div className="max-w-2xl">
+          <p className="eyebrow">Nossa análise</p>
           <h2 id="analise-titulo" className="mt-5 text-2xl sm:text-3xl md:text-4xl">
             Nossa análise: a Natflix vale a pena?
           </h2>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            A resposta depende do que você procura em uma plataforma fitness. Esta é a nossa
-            avaliação como página independente de afiliado, baseada nas informações publicadas
-            no site oficial — não é uma declaração da Natflix.
+          <p className="mt-5 text-base leading-relaxed text-muted-foreground">
+            Avaliamos a plataforma pensando em quem quer treinar com mais constância e menos
+            complicação. Abaixo, o que gostamos, o que merece atenção e para quem ela faz
+            sentido.
           </p>
+        </div>
 
-          <div className="mt-10 grid gap-5 lg:grid-cols-3">
-            <div className="card-soft p-6">
-              <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-sage text-sage-foreground">
-                <Users className="size-5" aria-hidden="true" />
-              </span>
-              <h3 className="mt-5 text-lg font-semibold">Para quem faz sentido</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Tende a ser relevante para mulheres que querem variedade de treinos, opções
-                para casa e para a academia, diferentes modalidades e ferramentas para
-                organizar uma rotina recorrente em uma única plataforma — especialmente quem
-                hoje perde tempo juntando treinos de fontes diferentes.
-              </p>
-            </div>
-
-            <div className="card-soft p-6">
-              <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-secondary text-secondary-foreground">
-                <Check className="size-5" aria-hidden="true" />
-              </span>
-              <h3 className="mt-5 text-lg font-semibold">Principais pontos positivos</h3>
-              <ul className="mt-3 space-y-2.5">
-                {positives.map((p) => (
-                  <li key={p} className="flex gap-2 text-sm text-muted-foreground">
-                    <Check className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
-                    {p}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="card-soft p-6">
-              <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-accent text-accent-foreground">
-                <AlertCircle className="size-5" aria-hidden="true" />
-              </span>
-              <h3 className="mt-5 text-lg font-semibold">O que considerar antes de assinar</h3>
-              <ul className="mt-3 space-y-2.5">
-                {considerations.map((c) => (
-                  <li key={c} className="text-sm leading-relaxed text-muted-foreground">
-                    · {c}
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div className="mt-10 grid gap-5 lg:grid-cols-2">
+          <div className="card-soft p-6">
+            <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-secondary text-secondary-foreground">
+              <Check className="size-5" aria-hidden="true" />
+            </span>
+            <h3 className="mt-5 text-lg font-semibold">O que gostamos</h3>
+            <ul className="mt-3 space-y-2.5">
+              {liked.map((i) => (
+                <li key={i} className="flex gap-2 text-sm text-muted-foreground">
+                  <Check className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+                  {i}
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <div className="mt-10 rounded-[1.5rem] border border-primary/20 bg-card p-6 md:p-8">
-            <p className="text-sm font-semibold uppercase tracking-wider text-primary">
-              Nossa recomendação
-            </p>
-            <p className="mt-3 max-w-3xl text-base leading-relaxed text-foreground">
-              Se você procura uma plataforma online com variedade de treinos, diferentes
-              modalidades e ferramentas para organizar sua rotina, a Natflix é uma opção que
-              vale a pena conhecer. Antes de assinar, recomendamos conferir os planos,
-              condições e recursos disponíveis diretamente no site oficial.
-            </p>
-            <div className="mt-6">
-              <AffiliateCta id="cta-natflix-analise" size="default">
-                Ver planos no site oficial
-              </AffiliateCta>
-            </div>
+          <div className="card-soft p-6">
+            <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-accent text-accent-foreground">
+              <AlertCircle className="size-5" aria-hidden="true" />
+            </span>
+            <h3 className="mt-5 text-lg font-semibold">O que considerar antes de assinar</h3>
+            <ul className="mt-3 space-y-2.5">
+              {considerations.map((i) => (
+                <li key={i} className="flex gap-2 text-sm text-muted-foreground">
+                  <Minus className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+                  {i}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="card-soft p-6">
+            <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-sage text-sage-foreground">
+              <Users className="size-5" aria-hidden="true" />
+            </span>
+            <h3 className="mt-5 text-lg font-semibold">Para quem faz sentido</h3>
+            <ul className="mt-3 space-y-2.5">
+              {forWho.map((i) => (
+                <li key={i} className="flex gap-2 text-sm text-muted-foreground">
+                  <Check className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+                  {i}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="card-soft p-6">
+            <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-muted text-foreground">
+              <Minus className="size-5" aria-hidden="true" />
+            </span>
+            <h3 className="mt-5 text-lg font-semibold">Para quem talvez não faça</h3>
+            <ul className="mt-3 space-y-2.5">
+              {notForWho.map((i) => (
+                <li key={i} className="flex gap-2 text-sm text-muted-foreground">
+                  <Minus className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+                  {i}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
-  );
-}
 
-export function Transparency() {
-  const items = [
-    "O site oficial informa que as assinaturas são renovadas automaticamente de acordo com o plano escolhido.",
-    "O site oficial informa que a primeira assinatura conta com prazo de reembolso de 7 dias, sujeito aos termos apresentados.",
-    "Para procedimentos completos de cancelamento e reembolso, consulte o site oficial da Natflix Fitness e a Hotmart.",
-  ];
-
-  return (
-    <section aria-labelledby="transparencia-titulo" className="bg-cream">
-      <div className="container-page py-14 md:py-20">
-        <div className="max-w-3xl">
-          <p className="eyebrow">Transparência</p>
-          <h2 id="transparencia-titulo" className="mt-5 text-2xl sm:text-3xl">
-            Antes de assinar, confira as condições.
-          </h2>
-          <ul className="mt-6 space-y-3">
-            {items.map((i) => (
-              <li key={i} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
-                <Check className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
-                {i}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-6 text-xs text-muted-foreground">
-            As informações acima são um resumo do que consta no site oficial e não constituem
-            orientação jurídica.
+        <div className="mt-8 rounded-[1.5rem] border border-primary/20 bg-card p-6 md:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wider text-primary">
+            Nosso veredito
           </p>
+          <p className="mt-3 max-w-3xl text-base leading-relaxed text-foreground">
+            Se você procura uma plataforma online com variedade de treinos e uma forma mais
+            prática de organizar sua rotina, a Natflix é uma opção que vale a pena conhecer.
+            Antes de assinar, confira planos e condições atualizados no site oficial.
+          </p>
+          <div className="mt-6">
+            <AffiliateCta id="cta-natflix-analise" size="default">
+              Conhecer a Natflix no site oficial
+            </AffiliateCta>
+          </div>
         </div>
       </div>
     </section>
@@ -148,11 +141,10 @@ export function FinalCta() {
             id="cta-final-titulo"
             className="mx-auto max-w-2xl text-2xl text-primary-foreground sm:text-3xl md:text-4xl"
           >
-            Quer conhecer a Natflix por dentro?
+            Ficou convencida? Veja a Natflix por dentro
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/85">
-            Veja todos os detalhes da plataforma, conteúdos, modalidades, planos e condições
-            diretamente no site oficial.
+            Confira planos, modalidades e condições atualizados diretamente no site oficial.
           </p>
           <div className="mt-8 flex flex-col items-center">
             <AffiliateCta
@@ -160,10 +152,10 @@ export function FinalCta() {
               variant="ctaSoft"
               className="w-full sm:w-auto"
             >
-              Conhecer a Natflix Fitness
+              Conhecer a Natflix no site oficial
             </AffiliateCta>
-            <p className="mt-4 text-sm text-primary-foreground/80">
-              Você será direcionada para o site oficial da Natflix Fitness.
+            <p className="mt-4 text-xs text-primary-foreground/75">
+              Página independente · usamos link de afiliado, sem custo extra para você.
             </p>
           </div>
         </div>
@@ -179,7 +171,7 @@ export function Faq() {
         <div className="max-w-2xl">
           <p className="eyebrow">Dúvidas frequentes</p>
           <h2 id="faq-titulo" className="mt-5 text-2xl sm:text-3xl md:text-4xl">
-            Perguntas que costumam surgir antes de assinar.
+            Perguntas que costumam surgir antes de assinar
           </h2>
         </div>
 
