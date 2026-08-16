@@ -1,13 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/natflix/Header";
 import { Hero } from "@/components/natflix/Hero";
-import {
-  Benefits,
-  Comparison,
-  Nutrition,
-  Problem,
-  WhatIs,
-} from "@/components/natflix/Sections";
+import { Benefits, Comparison, Problem, WhatIs } from "@/components/natflix/Sections";
 import { Pricing } from "@/components/natflix/Pricing";
 import { Analysis, Faq, FinalCta } from "@/components/natflix/Analysis";
 import { Footer } from "@/components/natflix/Footer";
@@ -16,7 +10,7 @@ import { faqs } from "@/components/natflix/data";
 
 const TITLE = "Natflix Fitness vale a pena? Análise honesta e preços";
 const DESCRIPTION =
-  "Análise independente da Natflix Fitness: o que a plataforma oferece, o que gostamos, o que considerar antes de assinar, preços e para quem ela faz sentido.";
+  "Análise independente da Natflix Fitness: o que gostamos, o que considerar antes de assinar, preços e para quem a plataforma faz sentido.";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -56,10 +50,9 @@ function Index() {
         <Hero />
         <Problem />
         <WhatIs />
+        <Analysis />
         <Benefits />
         <Comparison />
-        <Analysis />
-        <Nutrition />
         <Pricing />
         <Faq />
         <FinalCta />
