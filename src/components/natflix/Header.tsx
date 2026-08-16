@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { AffiliateCta } from "./AffiliateCta";
+import { Button } from "@/components/ui/button";
 
 const navItems = [
-  { href: "#plataforma", label: "A plataforma" },
-  { href: "#modalidades", label: "Modalidades" },
-  { href: "#planos", label: "Planos" },
+  { href: "#problema", label: "O problema" },
+  { href: "#plataforma", label: "O que é" },
+  { href: "#comparacao", label: "Comparação" },
   { href: "#analise", label: "Nossa análise" },
+  { href: "#planos", label: "Preço" },
   { href: "#faq", label: "Dúvidas" },
 ];
 
@@ -18,14 +19,14 @@ export function Header() {
       <div className="container-page flex h-16 items-center justify-between gap-4">
         <a href="#top" className="flex items-baseline gap-1.5 no-underline">
           <span className="font-[family-name:var(--font-display)] text-lg font-semibold tracking-tight text-foreground">
-            Natflix
+            Fitness na Prática
           </span>
-          <span className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-primary">
-            Fitness
+          <span className="hidden text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-primary sm:inline">
+            Análises
           </span>
         </a>
 
-        <nav aria-label="Navegação principal" className="hidden items-center gap-7 lg:flex">
+        <nav aria-label="Navegação principal" className="hidden items-center gap-6 lg:flex">
           {navItems.map((item) => (
             <a
               key={item.href}
@@ -37,13 +38,12 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
-          <AffiliateCta id="cta-natflix-header-conhecer" variant="ctaOutline" size="default" withIcon={false}>
-            Conheça a Natflix
-          </AffiliateCta>
-          <AffiliateCta id="cta-natflix-header" variant="cta" size="default" withIcon={false}>
-            Ver planos
-          </AffiliateCta>
+        <div className="hidden md:flex">
+          <Button asChild variant="cta" size="default">
+            <a href="#analise" className="no-underline">
+              Ver análise
+            </a>
+          </Button>
         </div>
 
         <button
@@ -70,9 +70,6 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-            <AffiliateCta id="cta-natflix-menu" className="mt-3 w-full" size="default">
-              Ver planos
-            </AffiliateCta>
           </nav>
         </div>
       ) : null}
