@@ -1,7 +1,7 @@
 import { Sparkles } from "lucide-react";
 import heroImg from "@/assets/hero-natflix.jpg";
 import { Button } from "@/components/ui/button";
-import { AffiliateCta } from "./AffiliateCta";
+import { AFFILIATE_URL } from "./data";
 
 export function Hero() {
   return (
@@ -20,29 +20,29 @@ export function Hero() {
             Natflix Fitness vale a pena? Nossa análise antes de você assinar
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            Se você está procurando uma forma mais prática de manter uma rotina de treino,
-            analisamos a Natflix para mostrar o que ela oferece, para quem faz sentido e o que
-            considerar antes de assinar.
+            Analisamos a plataforma para você decidir rápido: o que ela oferece, para quem faz
+            sentido e o que considerar antes de assinar.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-8 flex flex-col items-start gap-3">
             <Button asChild variant="cta" size="xl" className="w-full sm:w-auto">
               <a href="#analise" className="no-underline">
-                Ver análise
+                Ver nossa análise
               </a>
             </Button>
-            <AffiliateCta
+            <a
               id="cta-natflix-hero"
-              variant="ctaOutline"
-              size="xl"
-              className="w-full sm:w-auto"
-              withIcon={false}
+              data-cta="cta-natflix-hero"
+              href={AFFILIATE_URL}
+              target="_blank"
+              rel="sponsored nofollow noopener noreferrer"
+              className="cta-natflix text-sm font-medium text-muted-foreground underline decoration-border underline-offset-4 transition-colors hover:text-foreground"
             >
-              Conhecer a Natflix no site oficial
-            </AffiliateCta>
+              Já decidiu? Ver Natflix no site oficial →
+            </a>
           </div>
           <p className="mt-4 text-xs text-muted-foreground">
-            Leitura de ~3 minutos · atualizado com base nas informações do site oficial.
+            Leitura de ~2 minutos · página independente, com links de afiliado.
           </p>
         </div>
 
