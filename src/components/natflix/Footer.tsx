@@ -1,3 +1,11 @@
+const links = [
+  { href: "#analise", label: "Sobre" },
+  { href: "#divulgacao", label: "Divulgação de Afiliados" },
+  { href: "#divulgacao", label: "Política de Privacidade" },
+  { href: "#divulgacao", label: "Termos de Uso" },
+  { href: "#divulgacao", label: "Contato" },
+];
+
 export function Footer() {
   return (
     <footer className="border-t border-border bg-background pb-24 md:pb-0">
@@ -15,30 +23,16 @@ export function Footer() {
 
           <nav aria-label="Links institucionais" className="text-sm">
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="#analise"
-                  className="text-muted-foreground no-underline hover:text-foreground"
-                >
-                  Nossa análise
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#faq"
-                  className="text-muted-foreground no-underline hover:text-foreground"
-                >
-                  Dúvidas frequentes
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contato"
-                  className="text-muted-foreground no-underline hover:text-foreground"
-                >
-                  Contato
-                </a>
-              </li>
+              {links.map((l) => (
+                <li key={l.label}>
+                  <a
+                    href={l.href}
+                    className="text-muted-foreground no-underline hover:text-foreground"
+                  >
+                    {l.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
@@ -48,13 +42,11 @@ export function Footer() {
           className="mt-10 border-t border-border pt-8 text-xs leading-relaxed text-muted-foreground"
         >
           <p>
-            Alguns links desta página são links de afiliado: se você assinar após clicar,
-            podemos receber uma comissão, sem custo adicional para você. Isso não influencia
-            nossa avaliação. Marcas citadas pertencem aos seus respectivos proprietários e as
-            informações sobre planos e condições podem ser alteradas pelo fornecedor.
-          </p>
-          <p id="contato" className="mt-4">
-            Contato: [SEU EMAIL DE CONTATO]
+            Esta é uma página independente. Alguns links são links de afiliado: se você assinar
+            após clicar, podemos receber uma comissão, sem custo adicional para você. Isso não
+            influencia nossa avaliação. Marcas citadas pertencem aos seus respectivos
+            proprietários e as informações sobre planos e condições podem ser alteradas pelo
+            fornecedor.
           </p>
         </div>
       </div>
