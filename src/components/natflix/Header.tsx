@@ -3,13 +3,13 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
-  { href: "#problema", label: "O problema" },
   { href: "#plataforma", label: "O que é" },
-  { href: "#comparacao", label: "Comparação" },
   { href: "#analise", label: "Nossa análise" },
+  { href: "#comparacao", label: "Comparação" },
   { href: "#planos", label: "Preço" },
   { href: "#faq", label: "Dúvidas" },
 ];
+
 
 export function Header() {
   const [open, setOpen] = useState(false);
