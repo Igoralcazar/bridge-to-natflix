@@ -1,5 +1,6 @@
-import { Info, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import heroImg from "@/assets/hero-natflix.jpg";
+import { Button } from "@/components/ui/button";
 import { AffiliateCta } from "./AffiliateCta";
 
 export function Hero() {
@@ -13,30 +14,36 @@ export function Hero() {
         <div className="rise">
           <p className="eyebrow">
             <Sparkles className="size-3.5" aria-hidden="true" />
-            Página independente de afiliado
+            Análise independente
           </p>
           <h1 className="mt-5 text-3xl leading-[1.1] sm:text-4xl md:text-5xl">
-            Uma plataforma fitness completa para mulheres que querem cuidar do corpo e da
-            rotina.
+            Natflix Fitness vale a pena? Nossa análise antes de você assinar
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            Treinos em casa ou na academia, diferentes modalidades, organização da rotina e
-            conteúdos para acompanhar sua jornada — tudo em um só lugar.
+            Se você está procurando uma forma mais prática de manter uma rotina de treino,
+            analisamos a Natflix para mostrar o que ela oferece, para quem faz sentido e o que
+            considerar antes de assinar.
           </p>
 
-          <div className="mt-8">
-            <AffiliateCta id="cta-natflix-hero" className="w-full sm:w-auto">
-              Conheça a Natflix Fitness
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Button asChild variant="cta" size="xl" className="w-full sm:w-auto">
+              <a href="#analise" className="no-underline">
+                Ver análise
+              </a>
+            </Button>
+            <AffiliateCta
+              id="cta-natflix-hero"
+              variant="ctaOutline"
+              size="xl"
+              className="w-full sm:w-auto"
+              withIcon={false}
+            >
+              Conhecer a Natflix no site oficial
             </AffiliateCta>
-            <p className="mt-3 text-sm text-muted-foreground">
-              Você será direcionada para o site oficial da Natflix.
-            </p>
-            <p className="mt-4 flex max-w-md items-start gap-2 rounded-2xl bg-card/70 p-3 text-xs leading-relaxed text-muted-foreground">
-              <Info className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
-              Página independente de afiliado. Podemos receber uma comissão se você assinar
-              através do nosso link.
-            </p>
           </div>
+          <p className="mt-4 text-xs text-muted-foreground">
+            Leitura de ~3 minutos · atualizado com base nas informações do site oficial.
+          </p>
         </div>
 
         <div className="relative">
@@ -52,10 +59,10 @@ export function Hero() {
           </div>
           <div className="card-soft absolute -bottom-5 left-4 max-w-[15rem] p-4 md:left-auto md:-left-6">
             <p className="text-xs font-semibold uppercase tracking-wider text-primary">
-              Em um só lugar
+              Resumo da análise
             </p>
             <p className="mt-1 text-sm text-muted-foreground">
-              Treinos, modalidades, fichas e agendas para organizar a semana.
+              Boa opção para quem quer praticidade e variedade em uma só plataforma.
             </p>
           </div>
         </div>
