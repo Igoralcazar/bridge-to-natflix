@@ -6,9 +6,9 @@ export function Pricing() {
     <section id="planos" aria-labelledby="planos-titulo" className="bg-cream">
       <div className="container-page py-16 md:py-24">
         <div className="max-w-2xl">
-          <p className="eyebrow">Planos</p>
+          <p className="eyebrow">Preço</p>
           <h2 id="planos-titulo" className="mt-5 text-2xl sm:text-3xl md:text-4xl">
-            Escolha o plano que combina com sua rotina.
+            Quanto custa a Natflix?
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
             Os valores abaixo são os preços atualmente exibidos no site oficial da Natflix.
@@ -46,7 +46,7 @@ export function Pricing() {
                 className="mt-6 w-full"
                 withIcon={false}
               >
-                Conhecer plano
+                Ver plano no site oficial
               </AffiliateCta>
             </article>
           ))}
