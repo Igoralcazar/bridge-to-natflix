@@ -23,16 +23,16 @@ const considerations = [
 ];
 
 const forWho = [
-  "Quer mais praticidade para organizar os treinos",
-  "Prefere flexibilidade entre casa e academia",
-  "Gosta de ter diferentes modalidades disponíveis",
-  "Procura uma rotina fitness mais organizada",
+  "Mais praticidade para organizar os treinos",
+  "Flexibilidade entre casa e academia",
+  "Diferentes modalidades disponíveis",
+  "Uma rotina fitness mais organizada",
 ];
 
 const notForWho = [
-  "Quer acompanhamento totalmente personalizado",
-  "Prefere supervisão presencial durante os treinos",
-  "Precisa de orientação individualizada de um profissional",
+  "Acompanhamento totalmente personalizado",
+  "Supervisão presencial durante os treinos",
+  "Orientação individualizada de um profissional",
 ];
 
 export function Analysis() {
