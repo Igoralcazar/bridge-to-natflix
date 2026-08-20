@@ -9,30 +9,30 @@ import { AffiliateCta } from "./AffiliateCta";
 import { faqs } from "./data";
 
 const liked = [
-  "Variedade de treinos e modalidades",
-  "Possibilidade de treinar em casa ou na academia",
-  "Ferramentas para organizar a rotina",
-  "Conteúdos complementares",
+  "Variedade de modalidades em uma única plataforma",
+  "Opções para treinar em casa ou na academia",
+  "Recursos que ajudam a organizar a rotina",
+  "Conteúdos complementares além dos treinos",
 ];
 
 const considerations = [
-  "É uma plataforma online",
+  "A experiência é principalmente online",
   "Não substitui acompanhamento individualizado quando ele é necessário",
-  "Planos têm renovação conforme as condições do site oficial",
-  "Preços e condições podem mudar",
+  "Os planos seguem as condições de renovação do site oficial",
+  "Preços, recursos e condições podem mudar",
 ];
 
 const forWho = [
-  "Praticidade no dia a dia",
-  "Flexibilidade para treinar onde der",
-  "Variedade de treinos",
-  "Uma rotina fitness mais organizada",
+  "Quer mais praticidade para organizar os treinos",
+  "Prefere flexibilidade entre casa e academia",
+  "Gosta de ter diferentes modalidades disponíveis",
+  "Procura uma rotina fitness mais organizada",
 ];
 
 const notForWho = [
-  "Acompanhamento totalmente personalizado",
-  "Supervisão presencial",
-  "Orientação médica, nutricional ou de treino individualizada",
+  "Quer acompanhamento totalmente personalizado",
+  "Prefere supervisão presencial durante os treinos",
+  "Precisa de orientação individualizada de um profissional",
 ];
 
 export function Analysis() {
@@ -185,7 +185,7 @@ export function Faq() {
         <div className="max-w-2xl">
           <p className="eyebrow">Dúvidas frequentes</p>
           <h2 id="faq-titulo" className="mt-5 text-2xl sm:text-3xl md:text-4xl">
-            Perguntas que costumam surgir antes de assinar
+            Dúvidas antes de decidir
           </h2>
         </div>
 
