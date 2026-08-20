@@ -37,8 +37,7 @@ export function WhatIs() {
             proposta é reunir treino, variedade e organização em um só lugar.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            Entre as modalidades estão musculação, Pilates, yoga, corrida e outras. A plataforma
-            também informa oferecer conteúdos relacionados à alimentação.
+             Entre as opções estão musculação, Pilates, yoga, corrida e outras, além de oferecer conteúdos relacionados à alimentação.
           </p>
           <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
             Recursos conforme informações publicadas no site oficial.
