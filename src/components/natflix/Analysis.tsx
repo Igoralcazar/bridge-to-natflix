@@ -1,4 +1,4 @@
-import { AlertCircle, Check, Minus, Users, X } from "lucide-react";
+import { AlertCircle, Check, Minus, Users } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
