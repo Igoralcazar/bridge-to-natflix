@@ -36,16 +36,16 @@ export function WhatIs() {
             Natflix em 20 segundos
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            A Natflix é uma plataforma fitness voltada para mulheres, com treinos para casa e
-            academia, diferentes modalidades e recursos para ajudar na organização da rotina. A
-            proposta é reunir treino, variedade e organização em um só lugar.
-          </p>
+  A Natflix é uma plataforma fitness voltada para mulheres que reúne treinos para casa
+  e academia, diferentes modalidades e recursos para organizar a rotina. A proposta é
+  concentrar variedade e praticidade em um só lugar.
+</p>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
              Entre as opções estão musculação, Pilates, yoga, corrida e outras, além de oferecer conteúdos relacionados à alimentação.
           </p>
           <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-            Recursos conforme informações publicadas no site oficial.
-          </p>
+  Recursos conforme informações publicadas no site oficial.
+</p>
         </div>
         <div className="overflow-hidden rounded-[2rem] shadow-[var(--shadow-card)]">
           <img
@@ -96,13 +96,13 @@ export function Comparison() {
         <div className="max-w-2xl">
           <p className="eyebrow">Comparação</p>
           <h2 id="comparativo-titulo" className="mt-5 text-2xl sm:text-3xl md:text-4xl">
-            Por conta própria x com uma plataforma
+           O que muda ao usar uma plataforma de treino?
           </h2>
         </div>
 
         <div className="mt-8 grid gap-4 md:grid-cols-2 md:gap-6">
           <div className="rounded-[1.75rem] border border-border bg-muted p-6">
-            <h3 className="text-lg font-semibold">Por conta própria</h3>
+           <h3 className="text-lg font-semibold">Organizando por conta própria</h3>
             <ul className="mt-4 space-y-3">
               {comparison.map((row) => (
                 <li key={row.alone} className="flex gap-3 text-sm text-muted-foreground">
