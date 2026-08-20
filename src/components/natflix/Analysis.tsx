@@ -98,15 +98,15 @@ export function Analysis() {
           </div>
 
           <div className="card-soft p-6">
-            <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-muted text-foreground">
-              <Minus className="size-5" aria-hidden="true" />
+            <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-red-50 text-red-500">
+              <X className="size-5" aria-hidden="true" />
             </span>
             <h3 className="mt-5 text-lg font-semibold">Para quem talvez não faça</h3>
             <p className="mt-3 text-sm text-muted-foreground">Quem procura:</p>
             <ul className="mt-2 space-y-2.5">
               {notForWho.map((i) => (
                 <li key={i} className="flex gap-2 text-sm text-muted-foreground">
-                  <Minus className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+                  <X className="mt-0.5 size-4 shrink-0 text-red-500" aria-hidden="true" />
                   {i}
                 </li>
               ))}
