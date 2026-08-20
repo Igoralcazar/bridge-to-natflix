@@ -20,18 +20,18 @@ export const benefits = [
 export const comparison = [
   {
     alone: "Procurar treinos em vários lugares",
-    platform: "Conteúdo organizado em uma plataforma",
+    platform: "Treinos e conteúdos reunidos em uma plataforma",
   },
   {
-    alone: "Organizar a semana do zero",
-    platform: "Fichas e agendas prontas para ajustar",
+    alone: "Organizar a semana por conta própria",
+    platform: "Fichas e agendas para ajudar na organização",
   },
   {
-    alone: "Pouca variedade de estímulos",
-    platform: "Diferentes modalidades disponíveis",
+    alone: "Buscar modalidades em fontes diferentes",
+    platform: "Diferentes modalidades reunidas no mesmo ambiente",
   },
   {
-    alone: "Registros espalhados",
+    alone: "Registrar cargas e treinos separadamente",
     platform: "Fichas editáveis para registrar cargas",
   },
 ];
@@ -51,7 +51,7 @@ export const plans = [
     unit: "/mês",
     secondary: "ou R$ 173,70 à vista",
     renewal: "Renovação automática a cada 3 meses.",
-    badge: "MAIS VENDIDO — segundo o site oficial",
+    badge: null,
   },
   {
     name: "Semestral",
@@ -74,34 +74,34 @@ export const plans = [
 export const faqs = [
   {
     q: "O que é a Natflix Fitness?",
-    a: "É uma plataforma fitness online voltada para mulheres, com treinos e conteúdos em diferentes modalidades e recursos para organizar a rotina.",
+    a: "É uma plataforma fitness online voltada para mulheres, com treinos para casa e academia, diferentes modalidades e recursos para ajudar na organização da rotina.",
   },
   {
     q: "Posso treinar em casa?",
-    a: "Sim. O site oficial informa que há treinos para fazer em casa e também na academia.",
+    a: "Sim. O site oficial informa que a plataforma oferece opções de treino para fazer em casa e também na academia.",
   },
   {
     q: "É indicada para iniciantes?",
-    a: "Segundo o site oficial, há opções do iniciante ao avançado.",
+    a: "Segundo o site oficial, existem opções para diferentes níveis, do iniciante ao avançado.",
   },
   {
-    q: "Funciona para quem já treina na academia?",
-    a: "Sim. A plataforma apresenta treinos com aparelhos e pesos, além das opções para casa.",
+    q: "A Natflix também serve para quem treina na academia?",
+    a: "Sim. O site oficial informa que a plataforma inclui treinos para academia, além das opções para fazer em casa.",
   },
   {
-    q: "Quanto custa?",
-    a: "O site oficial apresenta planos mensal, trimestral, semestral e anual. Os preços desta página vêm do site oficial e podem ser alterados pelo fornecedor.",
+    q: "Quanto custa a Natflix?",
+    a: "Atualmente, o site oficial apresenta planos mensal, trimestral, semestral e anual. Os valores mostrados nesta página foram consultados no site oficial e podem ser alterados pelo fornecedor.",
   },
   {
     q: "A assinatura renova automaticamente?",
-    a: "Segundo o site oficial, sim, conforme o período do plano escolhido.",
+    a: "Segundo o site oficial, sim. A renovação ocorre de acordo com o período do plano escolhido.",
   },
   {
     q: "Existe prazo para solicitar reembolso?",
-    a: "O site oficial informa um prazo de 7 dias após a primeira assinatura, sujeito às condições da plataforma.",
+    a: "O site oficial informa possibilidade de reembolso em até 7 dias após a primeira assinatura, sujeito às condições da plataforma. Esse prazo não se estende às renovações.",
   },
   {
     q: "Esta é a página oficial da Natflix?",
-    a: "Não. Esta é uma página independente de análise, com links de afiliado. Ao clicar nos botões, você será direcionada ao site oficial.",
+    a: "Não. Esta é uma página independente de análise. Alguns links são de afiliado e, ao clicar neles, você será direcionada ao site oficial da Natflix Fitness.",
   },
 ];
