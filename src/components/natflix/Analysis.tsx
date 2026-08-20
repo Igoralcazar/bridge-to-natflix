@@ -45,9 +45,10 @@ export function Analysis() {
             Nossa análise: a Natflix vale a pena?
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            Avaliamos a plataforma pensando em quem quer treinar com mais constância e menos
-            complicação.
-          </p>
+  Na nossa avaliação, o principal atrativo da Natflix está em reunir variedade,
+  flexibilidade e organização. A questão é entender se esse formato combina com a
+  maneira como você prefere treinar.
+</p>
         </div>
 
         <div className="mt-8 grid gap-5 lg:grid-cols-2">
