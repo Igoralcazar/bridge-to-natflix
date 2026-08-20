@@ -11,11 +11,15 @@ export function Problem() {
           <h2 id="problema-titulo" className="mt-5 text-2xl sm:text-3xl md:text-4xl">
             O difícil nem sempre é começar. É manter uma rotina.
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            Quando os treinos, os horários, as modalidades e a organização dependem só de você,
-            manter constância fica mais difícil. Não é falta de vontade — é falta de um plano
-            claro para a semana.
-          </p>
+         <p className="mt-5 text-base leading-relaxed text-muted-foreground">
+  Entre trabalho, compromissos e o dia a dia, decidir o que treinar e organizar a
+  semana pode virar mais uma tarefa. Sem uma rotina clara, manter a consistência pode
+  ficar mais difícil.
+</p>
+
+<p className="mt-4 text-base font-medium text-foreground">
+  É aí que uma plataforma de treinos pode ajudar.
+</p>
         </div>
       </div>
     </section>
