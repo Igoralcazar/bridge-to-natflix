@@ -13,7 +13,7 @@ const TITLE =
 const DESCRIPTION =
   "Natflix Fitness vale a pena? Veja nossa análise independente, preços, principais vantagens, limitações e para quem a plataforma pode fazer sentido.";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/natflix-fitness-vale-a-pena")({
   component: Index,
   head: () => ({
     meta: [
