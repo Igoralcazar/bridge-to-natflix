@@ -28,7 +28,12 @@ export const Route = createFileRoute("/natflix-fitness-vale-a-pena")({
 },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+links: [
+  {
+    rel: "canonical",
+    href: "https://fitnessnapratica.com.br/natflix-fitness-vale-a-pena",
+  },
+],
     scripts: [
       {
         type: "application/ld+json",
