@@ -1,9 +1,9 @@
 const links = [
-  { href: "/sobre", label: "Sobre", enabled: false },
-  { href: "/divulgacao-de-afiliados", label: "Divulgação de Afiliados", enabled: false },
-  { href: "/politica-de-privacidade", label: "Política de Privacidade", enabled: false },
-  { href: "/termos-de-uso", label: "Termos de Uso", enabled: false },
-  { href: "/contato", label: "Contato", enabled: false },
+  { href: "/sobre", label: "Sobre", enabled: true },
+  { href: "/divulgacao-de-afiliados", label: "Divulgação de Afiliados", enabled: true },
+  { href: "/politica-de-privacidade", label: "Política de Privacidade", enabled: true },
+  { href: "/termos-de-uso", label: "Termos de Uso", enabled: true },
+  { href: "/contato", label: "Contato", enabled: true },
 ];
 
 export function Footer() {
