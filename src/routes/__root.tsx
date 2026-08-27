@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { CookieConsent } from "../components/CookieConsent";
 
 function NotFoundComponent() {
   return (
@@ -112,6 +113,38 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
+        {/* Google Consent Mode */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+window.dataLayer = window.dataLayer || [];
+
+window.gtag = function() {
+  window.dataLayer.push(arguments);
+};
+
+(function() {
+  var savedConsent = null;
+
+  try {
+    savedConsent = localStorage.getItem('fitnessnapratica_consent_v1');
+  } catch (e) {}
+
+  var granted = savedConsent === 'granted';
+
+  window.gtag('consent', 'default', {
+    analytics_storage: granted ? 'granted' : 'denied',
+    ad_storage: granted ? 'granted' : 'denied',
+    ad_user_data: granted ? 'granted' : 'denied',
+    ad_personalization: granted ? 'granted' : 'denied',
+    wait_for_update: 500
+  });
+})();
+`,
+          }}
+        />
+
+        {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -126,6 +159,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </head>
 
       <body>
+        {/* Google Tag Manager fallback */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-T9GB3VKB"
@@ -136,6 +170,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
 
         {children}
+
+        <CookieConsent />
+
         <Scripts />
       </body>
     </html>
